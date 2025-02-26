@@ -131,11 +131,13 @@ jQuery(document).ready(function ($) {
             action: "calculate_hcx_config",
             vCenters: vCenters
         }, function (response) {
-            console.log("AJAX Response:", response); // Debugging Step 4
+            console.log("AJAX Response:", response); // Debugging Step
             if (response.success) {
                 $("#hcx-output").html(`
                     <div class="output-summary">
                         <h3>HCX Configuration</h3>
+                        <p style="color: orange;">HCX Connector Appliance: ${response.data.hcx_connectors}</p>
+                        <p style="color: orange;"># of IPs for HCX Connector Appliances: ${response.data.hcx_connector_ips}</p>
                         <p style="color: lightblue;">HCX Service Mesh's: ${response.data.service_meshes}</p>
                         <p style="color: lightgreen;">IX Appliances: ${response.data.ix_appliances}</p>
                         <p style="color: darkblue;">WO Appliances: ${response.data.wo_appliances}</p>
@@ -151,6 +153,6 @@ jQuery(document).ready(function ($) {
             }
         }).fail(function (jqXHR, textStatus, errorThrown) {
             console.error("AJAX Error:", textStatus, errorThrown, jqXHR.responseText);
-        });
+        });            
     });
 });

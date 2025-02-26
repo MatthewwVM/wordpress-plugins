@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name: HCX IP Calculator
- * Plugin URI: https://yourwebsite.com
+ * Plugin URI: https://dinocloud.net/hcx-ip-calculator
  * Description: A dynamic calculator for HCX IP requirements.
- * Version: 1.0
- * Author: Your Name
- * Author URI: https://yourwebsite.com
+ * Version: 2.0
+ * Author: Matthew Webb
+ * Author URI: https://dinocloud.net
  * License: GPL2
  */
 
